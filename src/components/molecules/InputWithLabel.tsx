@@ -83,10 +83,6 @@ const InputWithLabel: React.FC<InputWithLabelProps> = ({
         padding={inputPadding}
         $borderColor={borderColor}
       />
-      <p>
-        To declare a variable in JavaScript, you use the <code>let</code>{" "}
-        keyword.
-      </p>
       {error && <ErrorMessage>{error}</ErrorMessage>}
     </FieldContainer>
   );

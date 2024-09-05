@@ -25,6 +25,9 @@ const StyledUserBoxDiv = styled.div`
       cursor: pointer;
       color: #d73f03;
     }
+    > span {
+      font-size: 12px;
+    }
   }
 `;
 
