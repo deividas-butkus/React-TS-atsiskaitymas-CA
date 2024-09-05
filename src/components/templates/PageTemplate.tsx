@@ -1,14 +1,15 @@
 import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
+import logo from "./../../media/logo.png";
 
 type PropsType = {
-  children: React.ReactElement;
+  children: React.ReactNode;
 };
 
 const PageTemplate = ({ children }: PropsType) => {
   return (
     <>
-      <Header />
+      <Header logoImg={logo} />
       {children}
       <Footer />
     </>
