@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import Logo from "../atoms/Logo";
@@ -43,10 +44,11 @@ const Header = ({ logoImg }: Props) => {
   return (
     <StyledHeader>
       <div className="logo">
-        <Logo logoImg={logoImg} />
+        <Link to={"/"}>
+          <Logo logoImg={logoImg} />
+        </Link>
       </div>
       <NavBar />
-
       <UserBox />
     </StyledHeader>
   );

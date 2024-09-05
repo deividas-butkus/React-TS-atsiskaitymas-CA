@@ -4,9 +4,7 @@ import PageTemplate from "../templates/PageTemplate";
 const Home = () => {
   return (
     <PageTemplate>
-      <main>
-        <Posts />
-      </main>
+      <Posts />
     </PageTemplate>
   );
 };

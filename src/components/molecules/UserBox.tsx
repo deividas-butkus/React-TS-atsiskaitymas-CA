@@ -6,20 +6,19 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 
 const StyledUserBoxDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 5px;
+  > a,
+  div {
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    align-items: center;
     gap: 5px;
-    > a, div {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      &:hover {
-          cursor: pointer;
-          color: #d73f03;
-
-      }
+    &:hover {
+      cursor: pointer;
+      color: #d73f03;
     }
   }
 `;

@@ -1,20 +1,34 @@
 import styled from "styled-components";
 
 const StyledPostsSection = styled.section`
-  min-height: calc(100vh - 100px);
-  background-color: #faeadd;
-  > h1 {
-    margin: 0;
-    padding: 20px 0;
-    font-size: 1.5rem;
-    font-weight: 400;
+  > div {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    > article {
+      height: 100px;
+      border: 1px solid blue;
+    }
   }
 `;
 
 const Posts = () => {
   return (
     <StyledPostsSection>
-      <h1>Žinutės</h1>
+      <h2>Žinutės</h2>
+      <div>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+        <article>Article</article>
+      </div>
     </StyledPostsSection>
   );
 };
