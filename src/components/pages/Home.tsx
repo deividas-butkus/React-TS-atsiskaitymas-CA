@@ -1,4 +1,4 @@
-import Posts from "../organisms/Posts";
+import Posts from "../organisms/Articles";
 import PageTemplate from "../templates/PageTemplate";
 
 const Home = () => {

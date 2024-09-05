@@ -1,5 +1,5 @@
 import PageTemplate from "../templates/PageTemplate";
-import FavoritePosts from "../organisms/FavoritePosts";
+import FavoritePosts from "../organisms/FavoriteArticles";
 
 const MyFavorites = () => {
   return (
