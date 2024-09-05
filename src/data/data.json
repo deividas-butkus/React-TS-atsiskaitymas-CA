@@ -3,9 +3,10 @@
     {
       "id": "6969",
       "username": "Frank",
+      "email": "frank@mail.com",
+      "password": "Frank/123",
       "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/0/02/Frank_Zappa_1973_2.JPG",
       "dob": "1940-12-21",
-      "password": "Frank/123",
       "favoritePosts": ["1", "3"]
     }
   ],
