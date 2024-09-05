@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
 
 const StyledFooter = styled.footer`
-  height: 20vh;
+  min-height: 20vh;
   background-color: #5d8b0e;
   color: #fff;
   display: flex;

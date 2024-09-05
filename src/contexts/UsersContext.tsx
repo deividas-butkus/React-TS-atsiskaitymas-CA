@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState, useContext } from "react";
+import bcrypt from "bcryptjs";
 
 type User = {
   id: string;
@@ -20,6 +21,8 @@ type UsersContextT = {
   error: string | null;
   loggedInUser: User | null;
   setLoggedInUser: React.Dispatch<React.SetStateAction<User | null>>;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
 };
 
 const UsersContext = createContext<UsersContextT | undefined>(undefined);
@@ -43,12 +46,39 @@ export const UsersProvider = ({ children }: UsersProviderProps) => {
     fetchUsers();
   }, []);
 
+  const login = async (email: string, password: string) => {
+    setError(null);
+
+    try {
+      const user = users.find((u) => u.email === email);
+      if (!user) {
+        throw new Error("Neteisingas el. paštas arba slaptažodis");
+      }
+
+      // const isPasswordValid = await bcrypt.compare(password, user.password);
+      // if (!isPasswordValid) {
+      if (user.password !== password) {
+        throw new Error("Neteisingas el. paštas arba slaptažodis");
+      }
+
+      setLoggedInUser(user);
+    } catch (err) {
+      setError((err as Error).message);
+    }
+  };
+
+  const logout = () => {
+    setLoggedInUser(null);
+  };
+
   const value: UsersContextT = {
     users,
     error,
     setUsers,
     loggedInUser,
     setLoggedInUser,
+    login,
+    logout,
   };
 
   return (

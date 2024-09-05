@@ -1,3 +1,5 @@
+//TODO logo shrinking
+
 import { useState } from "react";
 import styled from "styled-components";
 import Spinner from "./Spinner";

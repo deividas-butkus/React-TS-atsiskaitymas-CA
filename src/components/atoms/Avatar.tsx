@@ -7,6 +7,7 @@ const StyledAvatarDiv = styled.div`
     border-radius: 50%;
     object-fit: cover;
     height: 100%;
+    width: 100%;
   }
 `;
 
