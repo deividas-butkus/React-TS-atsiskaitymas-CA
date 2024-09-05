@@ -6,6 +6,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import Avatar from "../atoms/Avatar";
 import { useUsersContext } from "../../contexts/UsersContext";
+import Button from "../atoms/Button";
 
 const StyledUserBoxDiv = styled.div`
   display: flex;
@@ -13,25 +14,15 @@ const StyledUserBoxDiv = styled.div`
   align-items: left;
   gap: 5px;
   > a,
-  div {
+  div,
+  button {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 5px;
+    font-family: inherit;
     &:hover {
       cursor: pointer;
-      color: #d73f03;
-    }
-  }
-  button {
-    background-color: transparent;
-    border: none;
-    font-family: inherit;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    &:hover {
       color: #d73f03;
     }
   }
@@ -56,13 +47,21 @@ const UserBox = () => {
       ) : (
         <>
           <Link to={"/myFavorites"}>
-            <Avatar />
-            <span>Frank</span>
+            <Avatar
+              avatarImg={loggedInUser.avatarImg}
+              username={loggedInUser.username}
+            />
+            <span>{loggedInUser.username}</span>
           </Link>
-          <button onClick={logout}>
+          <Button
+            bgColor="transparent"
+            color="#000"
+            padding="0"
+            onClick={logout}
+          >
             <span>Atsijungti</span>
             <LogoutIcon fontSize="small" />
-          </button>
+          </Button>
         </>
       )}
     </StyledUserBoxDiv>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button<ButtonPropsType>`
+const StyledButton = styled.button<Props>`
   font-size: ${({ fontSize }) => fontSize || "14px"};
   background-color: ${({ bgColor }) => bgColor || "#a63f3d"};
   color: ${({ color }) => color || "#fbf9da"};
@@ -16,19 +16,13 @@ const StyledButton = styled.button<ButtonPropsType>`
   }
 `;
 
-type ButtonPropsType = {
+type Props = {
   fontSize?: string;
   bgColor?: string;
   color?: string;
   padding?: string;
-};
-
-type PropsType = {
-  fontSize?: string;
   children: React.ReactNode;
-  bgColor?: string;
-  color?: string;
-  padding?: string;
+  onClick?: () => void;
 };
 
 const darkenColor = (color: string) => {
@@ -44,13 +38,21 @@ const darkenColor = (color: string) => {
     .padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
 };
 
-const Button = ({ fontSize, children, bgColor, color, padding }: PropsType) => {
+const Button = ({
+  fontSize,
+  children,
+  bgColor,
+  color,
+  padding,
+  onClick,
+}: Props) => {
   return (
     <StyledButton
       fontSize={fontSize}
       bgColor={bgColor}
       color={color}
       padding={padding}
+      onClick={onClick}
     >
       {children}
     </StyledButton>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import defaultAvatarImg from "./../../media/defaultAvatarImg.png";
 
 const StyledAvatarDiv = styled.div`
   height: 30px;
@@ -8,16 +9,19 @@ const StyledAvatarDiv = styled.div`
     object-fit: cover;
     height: 100%;
     width: 100%;
+    background-color: #d63f03;
   }
 `;
 
-const Avatar = () => {
+type AvatarImgProps = {
+  avatarImg?: string;
+  username: string;
+};
+
+const Avatar = ({ avatarImg, username }: AvatarImgProps) => {
   return (
     <StyledAvatarDiv>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/0/02/Frank_Zappa_1973_2.JPG"
-        alt="Frank"
-      />
+      <img src={avatarImg || defaultAvatarImg} alt={username} />
     </StyledAvatarDiv>
   );
 };
