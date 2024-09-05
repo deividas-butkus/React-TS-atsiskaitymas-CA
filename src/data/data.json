@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "6969",
+      "username": "Frank",
+      "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/0/02/Frank_Zappa_1973_2.JPG",
+      "dob": "1940-12-21",
+      "password": "Frank/123",
+      "favoritePosts": ["1", "3"]
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "creatorId": "6969",
+      "title": "I'd like to tell you something about music and life",
+      "creationTime": "'1993-11-05T11:24:11.078Z'",
+      "postImg": "https://www.doublereed.co.uk/media/121399/music-and-the-meaning-of-life-3.png?anchor=center&mode=crop&width=924&height=572&rnd=132374765460000000",
+      "description": "If you end up with a boring miserable life because you listened to your mom, your dad, your teacher, your priest, or some guy on television telling you how to do your shit, then you deserve it."
+    }
+  ]
+}
