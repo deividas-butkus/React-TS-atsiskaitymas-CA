@@ -16,6 +16,14 @@
       "password": "$2a$10$VF.OpNnJPpeOZd.oyLICiuQ1oJ6tHjP4iOrNYvpY5BlUtlv4ehhpu",
       "dob": "1990-09-27",
       "avatarImg": "https://pyxis.nymag.com/v1/imgs/d9b/8a6/dd5670a47f2e07e5e53729d87665f14b2b-ALK-MIT-02.2x.rvertical.w570.jpg"
+    },
+    {
+      "id": "6e06d14b-fd55-4d3a-82d0-9bc8c8aa4b51",
+      "username": "Ozzy",
+      "email": "ozzy@mail.com",
+      "password": "$2a$10$zrTxplrQXVCPWTmjTQr8H.Ndx4KoZcmxeBZxJYvUlv5kBpNmtMjsu",
+      "dob": "1948-12-03",
+      "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/4/4a/OzzyChangingHands02-20-2010.jpg"
     }
   ],
   "posts": [

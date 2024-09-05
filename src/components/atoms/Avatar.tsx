@@ -1,4 +1,6 @@
+import { useState } from "react";
 import styled from "styled-components";
+
 import defaultAvatarImg from "./../../media/defaultAvatarImg.png";
 
 const StyledAvatarDiv = styled.div`
@@ -19,9 +21,15 @@ type AvatarImgProps = {
 };
 
 const Avatar = ({ avatarImg, username }: AvatarImgProps) => {
+  const [imgSrc, setImgSrc] = useState<string>(avatarImg || defaultAvatarImg);
+
+  const handleError = () => {
+    setImgSrc(defaultAvatarImg);
+  };
+
   return (
     <StyledAvatarDiv>
-      <img src={avatarImg || defaultAvatarImg} alt={username} />
+      <img src={imgSrc} alt={username} onError={handleError} />
     </StyledAvatarDiv>
   );
 };
