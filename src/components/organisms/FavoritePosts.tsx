@@ -1,9 +1,9 @@
-const FavotitePosts = () => {
+const FavoritePosts = () => {
   return (
     <section>
-      <h2>Favorite Posts</h2>
+      <h2>Labiausiai patinka šios žinutės</h2>
     </section>
   );
 };
 
-export default FavotitePosts;
+export default FavoritePosts;

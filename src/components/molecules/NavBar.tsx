@@ -37,7 +37,7 @@ const NavBar = () => {
           <NavLink to={"/"}>Pradžia</NavLink>
         </li>
         <li>
-          <NavLink to={"/myFavorites"}>Mano mėgstami</NavLink>
+          <NavLink to={"/myFavorites"}>Mano mėgstamos</NavLink>
         </li>
       </ul>
     </StyledNav>
