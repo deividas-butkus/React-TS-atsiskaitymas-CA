@@ -17,9 +17,10 @@ type StyledInputProps = {
 };
 
 const StyledInput = styled.input<StyledInputProps>`
+  font-family: inherit;
   padding: ${(props) => props.padding || "8px"};
-  border: 1px solid ${(props) => props.$borderColor || "#ccc"}; // Use $borderColor here
-  border-radius: 4px;
+  border: 1px solid ${(props) => props.$borderColor || "#ccc"};
+  border-radius: 15px;
   outline: none;
   &:focus {
     border-color: #007bff;
@@ -82,6 +83,10 @@ const InputWithLabel: React.FC<InputWithLabelProps> = ({
         padding={inputPadding}
         $borderColor={borderColor}
       />
+      <p>
+        To declare a variable in JavaScript, you use the <code>let</code>{" "}
+        keyword.
+      </p>
       {error && <ErrorMessage>{error}</ErrorMessage>}
     </FieldContainer>
   );

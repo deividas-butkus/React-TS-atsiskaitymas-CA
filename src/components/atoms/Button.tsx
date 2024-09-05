@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button<Props>`
+  font-family: inherit;
   font-size: ${({ fontSize }) => fontSize || "14px"};
   background-color: ${({ bgColor }) => bgColor || "#a63f3d"};
   color: ${({ color }) => color || "#fbf9da"};
   padding: ${({ padding }) => padding || "10px 20px"};
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
 
