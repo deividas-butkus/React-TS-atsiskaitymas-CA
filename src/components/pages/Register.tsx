@@ -9,11 +9,13 @@ import Button from "../atoms/Button";
 import { useUsersContext } from "../../contexts/UsersContext";
 
 const StyledRegisterSection = styled.section`
-  padding: 0 10%;
   > form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    > div {
+      gap: 0;
+    }
     > button {
       margin-top: 20px;
       align-self: flex-start;
