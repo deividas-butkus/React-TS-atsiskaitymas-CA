@@ -1,8 +1,12 @@
+import Posts from "../organisms/Posts";
 import PageTemplate from "../templates/PageTemplate";
+
 const Home = () => {
   return (
     <PageTemplate>
-      <main>Main</main>
+      <main>
+        <Posts />
+      </main>
     </PageTemplate>
   );
 };
