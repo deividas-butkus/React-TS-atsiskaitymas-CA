@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FieldContainer = styled.div<{ gap?: string }>`
   display: flex;
   flex-direction: column;
-  gap: ${(props) => props.gap || "10px"};
+  gap: ${(props) => props.gap};
 `;
 
 const StyledLabel = styled.label<{ color?: string; fontSize?: string }>`

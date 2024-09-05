@@ -13,9 +13,6 @@ const StyledRegisterSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    > div {
-      gap: 0;
-    }
     > button {
       margin-top: 20px;
       align-self: flex-start;
