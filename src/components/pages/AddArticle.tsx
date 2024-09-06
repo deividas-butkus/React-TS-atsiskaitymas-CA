@@ -60,7 +60,9 @@ const AddArticle = () => {
     return true;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormInputs((prev) => ({
       ...prev,
@@ -68,7 +70,9 @@ const AddArticle = () => {
     }));
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     validateField(name as keyof typeof formInputs, value);
   };
@@ -148,6 +152,7 @@ const AddArticle = () => {
             error={errors.title}
           />
           <InputWithLabel
+            type="textarea"
             label="Tekstas"
             name="description"
             value={formInputs.description}
@@ -156,6 +161,7 @@ const AddArticle = () => {
             error={errors.description}
           />
           <InputWithLabel
+            type="url"
             label="Paveikslėlis"
             name="articleImg"
             value={formInputs.articleImg}

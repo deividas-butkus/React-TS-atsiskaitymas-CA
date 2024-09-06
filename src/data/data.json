@@ -39,9 +39,16 @@
       "password": "$2a$10$kJqehel4pDo6.eQ2nd0JS.isr9joT099FCg/h5WfE7rwe/2y2j06S",
       "dob": "2000-01-01",
       "avatarImg": "",
-      "favoriteArticles": [
-        "1"
-      ]
+      "favoriteArticles": []
+    },
+    {
+      "id": "cb131f68-20f9-4731-a74e-7503d61b0ac7",
+      "username": "Rytis",
+      "email": "cici@mail.com",
+      "password": "$2a$10$9hgHGySMM26fTMKIwHYZBuVWMcOxiOs4Rsr/ChryW.XuzJ1tLcqz.",
+      "dob": "2000-08-08",
+      "avatarImg": "https://www.pipedija.com/images/d/d8/Rytis%2BCicinas-5.jpg",
+      "favoriteArticles": []
     }
   ],
   "articles": [
@@ -76,6 +83,14 @@
       "title": "TRYNIMUI Minedo bandymas tapti ne tik dainininku, politiku, bet ir rašytoju",
       "articleImg": "https://images.delfi.lt/media-api-image-cropper/v1/2e1d55c0-abb8-11ed-8685-7b4ad97a4ffb.jpg?noup&w=1200&h=711&fx=0.5&fy=0.25",
       "description": "Bla bla bla"
+    },
+    {
+      "id": "65dec6bb-8176-469e-ad18-4d723f76773e",
+      "authorId": "cb131f68-20f9-4731-a74e-7503d61b0ac7",
+      "createdAt": "2024-09-06T09:30:54.615Z",
+      "title": "Ry2io kakadu",
+      "articleImg": "https://images.delfi.lt/media-api-image-cropper/v1/4ca91cc0-ac3c-11ed-afb5-579b271153cf.jpg?noup&w=1200&h=711&fx=0.5&fy=0.25",
+      "description": "Kauno muzikinio teatro dainininkas. Lankė fotomodelių kursus.[4] Ten susipažino su prabangaus restorano „Žaliasis kalnas“ Kaune šokėja, kurios dėka buvo pakviestas dainuoti restorane. Cicinas vienu metu dirbo teatre, restorane ir kavinėje. Susipažinus su Nijole Tallat-Kelpšaite, ši pasiūlė jam dainuoti kartu. Po maždaug 3 metų bendros veiklos su dainininke Rytis, pajutęs, jog tampa populiarus, pradėjo koncertuoti vienas. Į pirmuosius koncertus susirinkdavo vos 30–50 žmonių. Siekdamas gausesnės publikos, dirbo be pertraukų, kūrė savo sceninį įvaizdį, pirko brangius kostiumus, kurie tuo metu buvo vertinami įvairiai (scenoje pasirodyti su ilgais apsiaustais tuo metu buvo labai drąsu, nes niekas taip nesipuošdavo), norėdamas išsiskirti, siekė padaryti ką nors, ko anksčiau niekas kitas nedarė. Nors dėl to buvo nuožmiai kritikuojamas, tačiau ir toliau stebino savo spalvinga bei brangia scenine apranga (vieno kostiumo kaina – apie 5 000 Lt (apie 1 448 €) ir daugiau; pavyzdžiui, Kanaruose įsigyto kostiumo kaina siekė 10 000 Lt (apie 2 896 €)).[5] "
     }
   ]
 }

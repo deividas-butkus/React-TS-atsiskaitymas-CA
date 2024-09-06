@@ -85,7 +85,9 @@ const Register = () => {
     return true;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormInputs((prev) => ({
       ...prev,
@@ -93,7 +95,9 @@ const Register = () => {
     }));
   };
 
-  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     validateField(name as keyof typeof formInputs, value);
   };
@@ -212,8 +216,8 @@ const Register = () => {
             error={errors.dob}
           />
           <InputWithLabel
+            type="url"
             label="Jūsų avataro paveikslėlis"
-            // TODO pridėti url tipą
             name="avatarImg"
             value={formInputs.avatarImg}
             onChange={handleChange}
