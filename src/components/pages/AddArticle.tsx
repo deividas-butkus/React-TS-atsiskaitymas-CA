@@ -137,7 +137,7 @@ const AddArticle = () => {
   return (
     <PageTemplate>
       <StyledAddArticleSection>
-        <h2>Publikuokite straipsnį</h2>
+        <h2>Parašykite straipsnį</h2>
         <form onSubmit={handleSubmit}>
           <InputWithLabel
             label="Pavadinimas"
@@ -163,7 +163,7 @@ const AddArticle = () => {
             onBlur={handleBlur}
             error={errors.articleImg}
           />
-          <Button>Publikuoti</Button>
+          <Button bgColor="#5D8B0C">Publikuoti</Button>
         </form>
         {error && <p style={{ color: "red" }}>{error}</p>}{" "}
         {/* Display errors if any */}

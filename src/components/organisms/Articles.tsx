@@ -1,34 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 
 import { useArticlesContext } from "../../contexts/ArticlesContext";
 import Article from "../molecules/Article";
 import Spinner from "../atoms/Spinner";
 
 const StyledArticlesSection = styled.section`
-  > div.headingWithAdd {
-    > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      > a {
-        color: grey;
-        display: flex;
-        align-items: center;
-        gap: 3px;
-        text-decoration: none;
-        > svg {
-          transform: translateY(-13px);
-        }
-        &:hover {
-          color: #5d8b0c;
-          cursor: pointer;
-        }
-      }
-    }
-  }
   > div.articles {
     display: flex;
     flex-direction: column;
@@ -51,10 +28,6 @@ const Articles = () => {
       <div className="headingWithAdd">
         <div>
           <h2>Straipsniai</h2>
-          <Link to={"/add"}>
-            <span>Pridėti naują</span>
-            <MapsUgcIcon />
-          </Link>
         </div>
       </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
