@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { UsersProvider } from "./contexts/UsersContext";
+import { ArticlesProvider } from "./contexts/ArticlesContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLDivElement
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <UsersProvider>
-      <App />
+      <ArticlesProvider>
+        <App />
+      </ArticlesProvider>
     </UsersProvider>
   </BrowserRouter>
 );
