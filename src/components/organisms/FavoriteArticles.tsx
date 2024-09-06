@@ -1,7 +1,7 @@
 const FavoritePosts = () => {
   return (
     <section>
-      <h2>Labiausiai patinka šios žinutės</h2>
+      <h2>Labiausiai patinka šie</h2>
     </section>
   );
 };

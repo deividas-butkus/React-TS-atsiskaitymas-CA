@@ -51,8 +51,8 @@ const Login = () => {
     password?: string;
   }>({});
   const { login, loggedInUser, error } = useUsersContext();
-  const navigate = useNavigate();
   const [countdown, setCountdown] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const validateAllFields = () => {
     const result = loginSchema.safeParse(formInputs);
