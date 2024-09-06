@@ -1,10 +1,10 @@
-import Posts from "../organisms/Articles";
+import Articles from "../organisms/Articles";
 import PageTemplate from "../templates/PageTemplate";
 
 const Home = () => {
   return (
     <PageTemplate>
-      <Posts />
+      <Articles />
     </PageTemplate>
   );
 };
