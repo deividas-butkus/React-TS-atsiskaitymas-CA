@@ -63,8 +63,8 @@ const Register = () => {
     avatarImg?: string;
   }>({});
   const { register, loggedInUser, error } = useUsersContext();
-  const navigate = useNavigate();
   const [countdown, setCountdown] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const validateAllFields = () => {
     const result = registerSchema.safeParse(formInputs);
@@ -213,6 +213,7 @@ const Register = () => {
           />
           <InputWithLabel
             label="Jūsų avataro paveikslėlis"
+            // TODO pridėti url tipą
             name="avatarImg"
             value={formInputs.avatarImg}
             onChange={handleChange}
@@ -225,7 +226,7 @@ const Register = () => {
           <div style={{ color: "green" }}>
             <p>
               Vartotojas <strong>{loggedInUser.username}</strong> sėkmingai
-              prisijungė
+              užregistruotas
             </p>
             {countdown !== null && (
               <p>Būsite nukreipti į Pradžios puslapį po {countdown} s...</p>
