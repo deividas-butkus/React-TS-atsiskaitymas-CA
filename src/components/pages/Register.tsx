@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { z } from "zod";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import PageTemplate from "../templates/PageTemplate";
 import InputWithLabel from "../molecules/InputWithLabel";
@@ -69,6 +69,7 @@ const Register = () => {
   }>({});
   const { register, loggedInUser, error } = useUsersContext();
   const [countdown, setCountdown] = useState<number | null>(null);
+  const [showMessage, setShowMessage] = useState(true);
   const navigate = useNavigate();
 
   const validateAllFields = () => {
@@ -98,6 +99,7 @@ const Register = () => {
       ...prev,
       [name]: value,
     }));
+    setShowMessage(false);
   };
 
   const handleBlur = (
@@ -231,6 +233,15 @@ const Register = () => {
           />
           <Button>Pateikti</Button>
         </form>
+        {showMessage && (
+          <p>
+            Jau turite paskyrą? Eikite{" "}
+            <Link to="/login">
+              <code>Prisijungti</code>
+            </Link>
+            .
+          </p>
+        )}
         {loggedInUser ? (
           <div style={{ color: "green" }}>
             <p>
