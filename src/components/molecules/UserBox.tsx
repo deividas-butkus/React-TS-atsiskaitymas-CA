@@ -62,9 +62,9 @@ const UserBox = () => {
             />
           </Link>
           <Button
-            bgColor="transparent"
-            color="#000"
-            padding="0"
+            $bgColor="transparent"
+            $color="#000"
+            $padding="0"
             onClick={logout}
           >
             <span>Atsijungti</span>

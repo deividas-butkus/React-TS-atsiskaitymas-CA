@@ -2,26 +2,26 @@ import styled from "styled-components";
 
 const StyledButton = styled.button<Props>`
   font-family: inherit;
-  font-size: ${({ fontSize }) => fontSize || "14px"};
-  background-color: ${({ bgColor }) => bgColor || "#a63f3d"};
-  color: ${({ color }) => color || "#fbf9da"};
-  padding: ${({ padding }) => padding || "10px 20px"};
+  font-size: ${({ $fontSize }) => $fontSize || "14px"};
+  background-color: ${({ $bgColor }) => $bgColor || "#a63f3d"};
+  color: ${({ $color }) => $color || "#fbf9da"};
+  padding: ${({ $padding }) => $padding || "10px 20px"};
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${({ bgColor }) =>
-      bgColor ? darkenColor(bgColor) : "#D73F03"};
+    background-color: ${({ $bgColor }) =>
+      $bgColor ? darkenColor($bgColor) : "#D73F03"};
   }
 `;
 
 type Props = {
-  fontSize?: string;
-  bgColor?: string;
-  color?: string;
-  padding?: string;
+  $fontSize?: string;
+  $bgColor?: string;
+  $color?: string;
+  $padding?: string;
   children: React.ReactNode;
   onClick?: () => void;
 };
@@ -40,19 +40,19 @@ const darkenColor = (color: string) => {
 };
 
 const Button = ({
-  fontSize,
   children,
-  bgColor,
-  color,
-  padding,
+  $fontSize,
+  $bgColor,
+  $color,
+  $padding,
   onClick,
 }: Props) => {
   return (
     <StyledButton
-      fontSize={fontSize}
-      bgColor={bgColor}
-      color={color}
-      padding={padding}
+      $fontSize={$fontSize}
+      $bgColor={$bgColor}
+      $color={$color}
+      $padding={$padding}
       onClick={onClick}
     >
       {children}

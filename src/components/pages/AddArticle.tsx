@@ -169,7 +169,7 @@ const AddArticle = () => {
             onBlur={handleBlur}
             error={errors.articleImg}
           />
-          <Button bgColor="#5D8B0C">Publikuoti</Button>
+          <Button $bgColor="#5D8B0C">Publikuoti</Button>
         </form>
         {error && <p style={{ color: "red" }}>{error}</p>}{" "}
         {/* Display errors if any */}
