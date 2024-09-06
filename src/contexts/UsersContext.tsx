@@ -64,10 +64,8 @@ export const UsersProvider = ({ children }: UsersProviderProps) => {
         throw new Error("Neteisingas el. paštas arba slaptažodis");
       }
 
-      // TODO encrypt password
       const isPasswordValid = await bcrypt.compare(password, user.password);
       if (!isPasswordValid) {
-        // if (user.password !== password) {
         throw new Error("Neteisingas el. paštas arba slaptažodis");
       }
 
@@ -86,7 +84,7 @@ export const UsersProvider = ({ children }: UsersProviderProps) => {
     email,
     password,
     dob,
-    avatarImg = "Default",
+    avatarImg,
   }: RegisterData) => {
     setError(null);
 
