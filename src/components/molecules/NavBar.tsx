@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-
 import MapsUgcIcon from "@mui/icons-material/MapsUgc";
+
+import { useUsersContext } from "../../contexts/UsersContext";
 
 const StyledNav = styled.nav`
   > ul {
@@ -54,21 +55,27 @@ const StyledNav = styled.nav`
 `;
 
 const NavBar = () => {
+  const { loggedInUser } = useUsersContext();
+
   return (
     <StyledNav>
       <ul>
         <li>
           <NavLink to={"/"}>Pradžia</NavLink>
         </li>
-        <li>
-          <NavLink to={"/myFavorites"}>Mano mėgstami</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/add"}>
-            <span>Pridėti naują</span>
-            <MapsUgcIcon />
-          </NavLink>
-        </li>
+        {loggedInUser && (
+          <>
+            <li>
+              <NavLink to={"/myFavorites"}>Mano mėgstami</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/add"}>
+                <span>Pridėti naują</span>
+                <MapsUgcIcon />
+              </NavLink>
+            </li>
+          </>
+        )}
       </ul>
     </StyledNav>
   );

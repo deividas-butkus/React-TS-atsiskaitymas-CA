@@ -24,6 +24,11 @@ const StyledArticle = styled.article`
       }
     }
   }
+  > div:hover {
+    > img:hover {
+      background-color: grey;
+    }
+  }
 `;
 
 type Props = {

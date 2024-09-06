@@ -6,15 +6,18 @@ import defaultAvatarImg from "./../../media/defaultAvatarImg.png";
 const StyledAvatarDiv = styled.div`
   height: 30px;
   width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
   > img {
     background-color: #000;
     border-radius: 50%;
     object-fit: cover;
     height: 100%;
     width: 100%;
-    &:hover {
-      background-color: #d73f03;
-    }
+    transition: background-color 0.3s;
   }
 `;
 

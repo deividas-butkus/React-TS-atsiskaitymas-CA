@@ -30,6 +30,11 @@ const StyledUserBoxDiv = styled.div`
     > span {
       font-size: 12px;
     }
+    > div {
+      img:hover {
+        background-color: #d73f03;
+      }
+    }
   }
 `;
 
