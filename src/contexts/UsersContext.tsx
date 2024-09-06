@@ -9,6 +9,7 @@ type User = {
   password: string;
   avatarImg: string;
   dob: string;
+  favoriteArticles: string[];
 };
 
 type RegisterData = {
@@ -28,6 +29,8 @@ type UsersContextT = {
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
   register: (data: RegisterData) => Promise<void>;
+  addFavorite: (articleId: string) => void;
+  removeFavorite: (articleId: string) => void;
 };
 
 type UsersProviderProps = {
@@ -104,6 +107,7 @@ export const UsersProvider = ({ children }: UsersProviderProps) => {
         password: hashedPassword,
         dob,
         avatarImg,
+        favoriteArticles: [],
       };
 
       setUsers((prevUsers) => [...prevUsers, newUser]);
@@ -127,6 +131,90 @@ export const UsersProvider = ({ children }: UsersProviderProps) => {
     }
   };
 
+  const addFavorite = async (articleId: string) => {
+    if (!loggedInUser) return;
+
+    const updatedFavorites = Array.isArray(loggedInUser.favoriteArticles)
+      ? [...loggedInUser.favoriteArticles, articleId]
+      : [articleId];
+
+    const updatedUser = {
+      ...loggedInUser,
+      favoriteArticles: updatedFavorites,
+    };
+
+    try {
+      const response = await fetch(
+        `http://localhost:8080/users/${loggedInUser.id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            favoriteArticles: updatedUser.favoriteArticles,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Nepavyko pažymėti mėgstamo straipsnio serveryje");
+      }
+
+      setLoggedInUser(updatedUser);
+      setUsers((prevUsers) =>
+        prevUsers.map((user) =>
+          user.id === updatedUser.id ? updatedUser : user
+        )
+      );
+    } catch (err) {
+      console.error("Error updating favorites:", err);
+      setError((err as Error).message);
+    }
+  };
+
+  const removeFavorite = async (articleId: string) => {
+    if (!loggedInUser || !Array.isArray(loggedInUser.favoriteArticles)) return;
+
+    const updatedFavorites = loggedInUser.favoriteArticles.filter(
+      (id) => id !== articleId
+    );
+
+    const updatedUser = {
+      ...loggedInUser,
+      favoriteArticles: updatedFavorites,
+    };
+
+    try {
+      const response = await fetch(
+        `http://localhost:8080/users/${loggedInUser.id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            favoriteArticles: updatedUser.favoriteArticles,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Nepavyko pažymėti mėgstamo straipsnio serveryje");
+      }
+
+      setLoggedInUser(updatedUser);
+      setUsers((prevUsers) =>
+        prevUsers.map((user) =>
+          user.id === updatedUser.id ? updatedUser : user
+        )
+      );
+    } catch (err) {
+      console.error("Error updating favorites:", err);
+      setError((err as Error).message);
+    }
+  };
+
   const value: UsersContextT = {
     users,
     error,
@@ -136,6 +224,8 @@ export const UsersProvider = ({ children }: UsersProviderProps) => {
     login,
     logout,
     register,
+    addFavorite,
+    removeFavorite,
   };
 
   return (

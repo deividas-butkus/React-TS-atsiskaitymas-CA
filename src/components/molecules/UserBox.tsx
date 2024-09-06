@@ -4,7 +4,6 @@ import styled from "styled-components";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
-import Avatar from "../atoms/Avatar";
 import { useUsersContext } from "../../contexts/UsersContext";
 import Button from "../atoms/Button";
 import AvatarWithUsername from "./AvatarWithUsername";

@@ -1,10 +1,10 @@
 import PageTemplate from "../templates/PageTemplate";
-import FavoritePosts from "../organisms/FavoriteArticles";
+import FavoriteArticles from "../organisms/FavoriteArticles";
 
 const MyFavorites = () => {
   return (
     <PageTemplate>
-      <FavoritePosts />
+      <FavoriteArticles />
     </PageTemplate>
   );
 };

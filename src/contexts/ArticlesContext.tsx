@@ -22,6 +22,7 @@ type ArticlesContextT = {
   setArticles: React.Dispatch<React.SetStateAction<Article[]>>;
   error: string | null;
   addArticle: (data: RegisterData) => Promise<void>;
+  deleteArticle: (articleId: string) => Promise<void>;
 };
 
 type ArticlesProviderProps = {
@@ -84,11 +85,34 @@ export const ArticlesProvider = ({ children }: ArticlesProviderProps) => {
     }
   };
 
+  const deleteArticle = async (articleId: string) => {
+    setError(null);
+    try {
+      setArticles((prevArticles) =>
+        prevArticles.filter((article) => article.id !== articleId)
+      );
+
+      const response = await fetch(
+        `http://localhost:8080/articles/${articleId}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Klaida ištrinant straipsnį serveryje");
+      }
+    } catch (err) {
+      setError((err as Error).message);
+    }
+  };
+
   const value: ArticlesContextT = {
     articles,
     error,
     setArticles,
     addArticle,
+    deleteArticle,
   };
 
   return (

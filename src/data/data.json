@@ -7,7 +7,10 @@
       "password": "Frank/123",
       "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/0/02/Frank_Zappa_1973_2.JPG",
       "dob": "1940-12-21",
-      "favoritePosts": ["1", "3"]
+      "favoriteArticles": [
+        "1",
+        "3"
+      ]
     },
     {
       "id": "9e17cae7-3a19-4f31-b6bb-614755ca3f79",
@@ -23,7 +26,11 @@
       "email": "ozzy@mail.com",
       "password": "$2a$10$zrTxplrQXVCPWTmjTQr8H.Ndx4KoZcmxeBZxJYvUlv5kBpNmtMjsu",
       "dob": "1948-12-03",
-      "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/4/4a/OzzyChangingHands02-20-2010.jpg"
+      "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/4/4a/OzzyChangingHands02-20-2010.jpg",
+      "favoriteArticles": [
+        "1",
+        "8173a08b-6955-450e-8524-c026e2123439"
+      ]
     },
     {
       "id": "748bbec8-1619-4160-8beb-0ee7a4171362",
@@ -31,7 +38,10 @@
       "email": "mine@mail.com",
       "password": "$2a$10$kJqehel4pDo6.eQ2nd0JS.isr9joT099FCg/h5WfE7rwe/2y2j06S",
       "dob": "2000-01-01",
-      "avatarImg": ""
+      "avatarImg": "",
+      "favoriteArticles": [
+        "1"
+      ]
     }
   ],
   "articles": [
@@ -60,10 +70,10 @@
       "description": "Kiek man metų? Hmmm..., ir ar aš dar rokeris, ar jau storašiknis kvailų serialų dalyvis?"
     },
     {
-      "id": "59df3f52-2b7b-4c63-b667-3ab3184f71ae",
+      "id": "59df3f52-gqergf-4c63-b667-3ab3184f71ae",
       "authorId": "748bbec8-1619-4160-8beb-0ee7a4171362",
       "createdAt": "2024-09-06T06:53:48.008Z",
-      "title": "Minedo bandymas tapti ne tik dainininku, politiku, bet ir rašytoju",
+      "title": "TRYNIMUI Minedo bandymas tapti ne tik dainininku, politiku, bet ir rašytoju",
       "articleImg": "https://images.delfi.lt/media-api-image-cropper/v1/2e1d55c0-abb8-11ed-8685-7b4ad97a4ffb.jpg?noup&w=1200&h=711&fx=0.5&fy=0.25",
       "description": "Bla bla bla"
     }

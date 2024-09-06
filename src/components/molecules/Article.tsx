@@ -5,6 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 import { useUsersContext } from "../../contexts/UsersContext";
 import AvatarWithUsername from "./AvatarWithUsername";
+import { useArticlesContext } from "../../contexts/ArticlesContext";
 
 const StyledArticle = styled.article`
   height: fit-content;
@@ -48,9 +49,29 @@ const Article = ({
   description,
   createdAt,
 }: Props) => {
-  const { users } = useUsersContext();
+  const { users, loggedInUser, addFavorite, removeFavorite } =
+    useUsersContext();
+  const { deleteArticle } = useArticlesContext();
 
   const user = users.find((u) => u.id === authorId);
+
+  const isFavorite = Array.isArray(loggedInUser?.favoriteArticles)
+    ? loggedInUser?.favoriteArticles.includes(id)
+    : false;
+
+  const handleBookmarkToggle = () => {
+    if (isFavorite) {
+      removeFavorite(id);
+    } else {
+      addFavorite(id);
+    }
+  };
+
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to delete this article?")) {
+      deleteArticle(id);
+    }
+  };
 
   return (
     <StyledArticle key={id}>
@@ -73,9 +94,24 @@ const Article = ({
           second: undefined,
         })}
       </small>
-      <BookmarkAddIcon className="bookmarkAdd" />
-      <BookmarkRemoveIcon className="bookmarkRemove" />
-      <DeleteIcon className="delete" />
+      {loggedInUser && (
+        <>
+          {isFavorite ? (
+            <BookmarkRemoveIcon
+              className="bookmarkRemove"
+              onClick={handleBookmarkToggle}
+            />
+          ) : (
+            <BookmarkAddIcon
+              className="bookmarkAdd"
+              onClick={handleBookmarkToggle}
+            />
+          )}
+        </>
+      )}
+      {loggedInUser && loggedInUser.id === authorId && (
+        <DeleteIcon className="delete" onClick={handleDelete} />
+      )}
     </StyledArticle>
   );
 };
