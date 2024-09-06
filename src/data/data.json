@@ -59,16 +59,25 @@
       "dob": "1940-12-21",
       "avatarImg": "https://upload.wikimedia.org/wikipedia/commons/0/02/Frank_Zappa_1973_2.JPG",
       "favoriteArticles": []
+    },
+    {
+      "id": "f9254c4f-97a2-49ea-8b3d-62ff749306ac",
+      "username": "Be img",
+      "email": "beimg@mail.com",
+      "password": "$2a$10$3S3w2TsKNmsu/pG.M7188urnmsf2Y6Fsp.dVER3aX6GkLdDIi5TaW",
+      "dob": "2000-01-01",
+      "avatarImg": "",
+      "favoriteArticles": []
     }
   ],
   "articles": [
     {
-      "id": "1",
-      "authorId": "6969",
+      "id": "ed6b9d4c-eedc-450b-88b5-5f0edbf838b8",
+      "authorId": "adc62132-501a-4d7c-be29-4e94ef17599d",
+      "createdAt": "2024-09-06T11:46:02.505Z",
       "title": "I'd like to tell you something about music and life",
-      "description": "If you end up with a boring miserable life because you listened to your mom, your dad, your teacher, your priest, or some guy on television telling you how to do your shit, then you deserve it.",
-      "createdAt": "2024-09-05T20:58:37.855Z",
-      "articleImg": "https://www.doublereed.co.uk/media/121399/music-and-the-meaning-of-life-3.png?anchor=center&mode=crop&width=924&height=572&rnd=132374765460000000"
+      "articleImg": "https://www.doublereed.co.uk/media/121399/music-and-the-meaning-of-life-3.png?anchor=center&mode=crop&width=924&height=572&rnd=132374765460000000",
+      "description": "If you end up with a boring miserable life because you listened to your mom, your dad, your teacher, your priest, or some guy on television telling you how to do your shit, then you deserve it."
     },
     {
       "id": "ca8033ed-2e66-4f89-baf3-a8ada0767f12",
@@ -90,7 +99,7 @@
       "id": "59df3f52-gqergf-4c63-b667-3ab3184f71ae",
       "authorId": "748bbec8-1619-4160-8beb-0ee7a4171362",
       "createdAt": "2024-09-06T06:53:48.008Z",
-      "title": "TRYNIMUI Minedo bandymas tapti ne tik dainininku, politiku, bet ir rašytoju",
+      "title": "Minedo bandymas tapti ne tik dainininku, politiku, bet ir rašytoju",
       "articleImg": "https://images.delfi.lt/media-api-image-cropper/v1/2e1d55c0-abb8-11ed-8685-7b4ad97a4ffb.jpg?noup&w=1200&h=711&fx=0.5&fy=0.25",
       "description": "Bla bla bla"
     },
@@ -101,6 +110,14 @@
       "title": "Ryčio kakadu",
       "articleImg": "https://images.delfi.lt/media-api-image-cropper/v1/4ca91cc0-ac3c-11ed-afb5-579b271153cf.jpg?noup&w=1200&h=711&fx=0.5&fy=0.25",
       "description": "Kauno muzikinio teatro dainininkas. Lankė fotomodelių kursus. Ten susipažino su prabangaus restorano „Žaliasis kalnas“ Kaune šokėja, kurios dėka buvo pakviestas dainuoti restorane. Cicinas vienu metu dirbo teatre, restorane ir kavinėje. Susipažinus su Nijole Tallat-Kelpšaite, ši pasiūlė jam dainuoti kartu. Po maždaug 3 metų bendros veiklos su dainininke Rytis, pajutęs, jog tampa populiarus, pradėjo koncertuoti vienas. Į pirmuosius koncertus susirinkdavo vos 30–50 žmonių. Siekdamas gausesnės publikos, dirbo be pertraukų, kūrė savo sceninį įvaizdį, pirko brangius kostiumus, kurie tuo metu buvo vertinami įvairiai (scenoje pasirodyti su ilgais apsiaustais tuo metu buvo labai drąsu, nes niekas taip nesipuošdavo), norėdamas išsiskirti, siekė padaryti ką nors, ko anksčiau niekas kitas nedarė. Nors dėl to buvo nuožmiai kritikuojamas, tačiau ir toliau stebino savo spalvinga bei brangia scenine apranga (vieno kostiumo kaina – apie 5 000 Lt (apie 1 448 €) ir daugiau; pavyzdžiui, Kanaruose įsigyto kostiumo kaina siekė 10 000 Lt (apie 2 896 €)). "
+    },
+    {
+      "id": "c59f17ae-dec2-4790-b16d-4770c0b4ae80",
+      "authorId": "f9254c4f-97a2-49ea-8b3d-62ff749306ac",
+      "createdAt": "2024-09-06T12:35:11.913Z",
+      "title": "Be paveikslėlio",
+      "articleImg": "",
+      "description": "Šis straipsnis parašytas ir pateiktas be paveikslėlio."
     }
   ]
 }

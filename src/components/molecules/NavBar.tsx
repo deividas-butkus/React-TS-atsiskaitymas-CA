@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
   > ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 5px;
     > li {
       cursor: pointer;
       display: flex;

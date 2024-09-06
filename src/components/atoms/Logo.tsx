@@ -5,8 +5,8 @@ import styled from "styled-components";
 import Spinner from "./Spinner";
 
 const StyledLogoDiv = styled.div`
-  height: 100%;
-  width: auto;
+  height: 100px;
+  width: 100px;
   position: relative;
   display: grid;
   place-items: center;

@@ -9,6 +9,20 @@ import { useArticlesContext } from "../../contexts/ArticlesContext";
 
 const StyledArticle = styled.article`
   height: fit-content;
+  position: relative;
+  > h3 {
+    margin-bottom: 0;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  > img {
+    border-radius: 10px;
+  }
+
   > svg {
     color: grey;
     font-size: 1.5rem;
@@ -25,10 +39,14 @@ const StyledArticle = styled.article`
       }
     }
   }
-  > div:hover {
-    > img:hover {
-      background-color: grey;
-    }
+
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #c68383;
+    margin: 20px 0;
+    opacity: 0.7;
   }
 `;
 
@@ -76,24 +94,28 @@ const Article = ({
   return (
     <StyledArticle key={id}>
       <h3>{title}</h3>
-      {user && (
-        <AvatarWithUsername
-          avatarImg={user.avatarImg}
-          username={user.username}
-        />
+      <div>
+        {user && (
+          <AvatarWithUsername
+            avatarImg={user.avatarImg}
+            username={user.username}
+          />
+        )}
+        <small>
+          {new Date(createdAt).toLocaleString("lt-LT", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: undefined,
+          })}
+        </small>
+      </div>
+      {articleImg && (
+        <img src={articleImg} alt={title} style={{ width: "200px" }} />
       )}
-      <img src={articleImg} alt={title} style={{ width: "100px" }} />
       <p>{description}</p>
-      <small>
-        {new Date(createdAt).toLocaleString("lt-LT", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: undefined,
-        })}
-      </small>
       {loggedInUser && (
         <>
           {isFavorite ? (
