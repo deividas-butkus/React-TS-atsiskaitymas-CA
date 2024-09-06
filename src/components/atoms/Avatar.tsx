@@ -7,11 +7,14 @@ const StyledAvatarDiv = styled.div`
   height: 30px;
   width: 30px;
   > img {
+    background-color: #000;
     border-radius: 50%;
     object-fit: cover;
     height: 100%;
     width: 100%;
-    background-color: #d63f03;
+    &:hover {
+      background-color: #d73f03;
+    }
   }
 `;
 

@@ -7,6 +7,7 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import Avatar from "../atoms/Avatar";
 import { useUsersContext } from "../../contexts/UsersContext";
 import Button from "../atoms/Button";
+import AvatarWithUsername from "./AvatarWithUsername";
 
 const StyledUserBoxDiv = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const StyledUserBoxDiv = styled.div`
   > a,
   div,
   button {
+    color: #000;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -50,11 +52,10 @@ const UserBox = () => {
       ) : (
         <>
           <Link to={"/myFavorites"}>
-            <Avatar
+            <AvatarWithUsername
               avatarImg={loggedInUser.avatarImg}
               username={loggedInUser.username}
             />
-            <span>{loggedInUser.username}</span>
           </Link>
           <Button
             bgColor="transparent"
